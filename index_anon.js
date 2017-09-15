@@ -20,10 +20,25 @@ var squared = array.map(function(element) {
 
 console.log(squared);
 
+//CITIES 1
+var cities = [
+  { name: 'Los Angeles', temperature: 60.0},
+  { name: 'Atlanta', temperature: 52.0 },
+  { name: 'Detroit', temperature: 48.0 },
+  { name: 'New York', temperature: 80.0 }
+];
 
-//  var numbers = [1, 5, 10, 15];
-// var doubles = numbers.map(function(x) {
-//    return x * 2;
-// array.forEach(function(element) {
-// console.log(element + "!");
-// })
+var coolTemps = cities.filter(function(element){
+   return element.temperature < 70;
+} )
+
+console.log(coolTemps);
+
+
+//CITIES 2
+
+ var cityNames = cities.filter(function(element) {
+    return element.name;
+ });
+
+ console.log(cityNames);
