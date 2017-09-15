@@ -1,0 +1,48 @@
+Anonymous functions are stored as variables so that they can be called in other
+functions.  This allows you to use other peoples code.  When using other
+peoples code, it is important to read their notations.
+
+A callback function is a function that is passed to another function.
+
+
+It is possible to write it as below instead of as a separate function
+to be called.
+
+array.forEach(function(element) {
+console.log(element + "!");
+})
+
+.map()
+
+creates a new array through iteration, building a new array
+based off of what the functions asks it to do.
+
+.filter()
+
+iterates through an array, creates a new array with only the elements that meet the
+conditions you want
+
+
+.every()
+
+different than .forEach, think of as all because it returns true or false
+if each element in the array meets the set conditions
+
+.some()
+
+is the opposite of .every(), returns true or false if at least one element
+meets the conditions set
+
+.sort()
+
+compares items in an array according to the conditions you set, sorts them
+and changes the original array, if you want lowest to highest do num1 - num2,
+if you want highest to lowest do num2 -num1
+
+var sortedNumbers = numbers.sort(function(num1, num2){
+return num1-num2;
+});
+
+.reduce()
+
+iterates through an array applies the callback and passes to the next callback
