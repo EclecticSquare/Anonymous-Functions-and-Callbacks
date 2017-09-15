@@ -37,8 +37,46 @@ console.log(coolTemps);
 
 //CITIES 2
 
- var cityNames = cities.filter(function(element) {
+ var cityNames = cities.map(function(element) {
     return element.name;
  });
 
  console.log(cityNames);
+
+
+//GOOD JOB!
+
+var people = [
+  'Dom',
+  'Lyn',
+  'Kirk',
+  'Autumn',
+  'Trista',
+  'Jesslyn',
+  'Kevin',
+  'John',
+  'Eli',
+  'Juan',
+  'Robert',
+  'Keyur',
+  'Jason',
+  'Che',
+  'Ben'
+];
+
+var goodJob = people.forEach(function(element) {
+  console.log("Good Job, " + element + "!");
+});
+
+console.log(goodJob);
+
+//SORT AN ARRAY 1
+
+  console.log(people.sort());
+//SORT AN ARRAY 2
+
+var nameLength = people.sort(function(element1, element2 ) {
+  return  element1.length- element2.length;
+});
+
+console.log(nameLength);
