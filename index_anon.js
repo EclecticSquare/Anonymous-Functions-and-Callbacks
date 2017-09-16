@@ -80,3 +80,44 @@ var nameLength = people.sort(function(element1, element2 ) {
 });
 
 console.log(nameLength);
+
+//SORT AN ARRAY 3 INCOMPLETE
+var arr = [
+  [1, 3, 4],
+  [2, 4, 6, 8],
+  [3, 6]
+];
+
+arr.sort(function(array1, array2){
+//we need to tell sort() whether array1 comes before array2 or not
+//if array1 comes before array2, return a negative number
+//otherwise return a positive number
+
+  var summingFunction = function(accumulator, number) {
+    return accumulator + number;
+  }
+
+  var array1Sum = array1.reduce( summingFunction, 0);  //this value that we return will be passed into accumulator
+  var array2Sum = array2.reduce( summingFunction, 0);  //this value that we return will be passed into accumulator
+
+  if(array1Sum < array2Sum) {
+    return -1;
+  } else {
+    return 1;
+  }
+});
+console.log(arr);
+
+
+//3 TIMES INCOMPLETE
+//
+// function call3Times(fun) {
+//   fun();
+//   fun();
+//   fun();
+// }
+//
+// console.log(call3Times("fun"));
+
+
+//
