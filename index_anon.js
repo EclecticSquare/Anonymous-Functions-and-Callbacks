@@ -109,15 +109,61 @@ arr.sort(function(array1, array2){
 console.log(arr);
 
 
-//3 TIMES INCOMPLETE
+//3 TIMES
 //
-// function call3Times(fun) {
-//   fun();
-//   fun();
-//   fun();
-// }
+function call3Times(fun) { // this fucntion takes a function, so make a function
+  //to pass to this function
+  fun();
+  fun();
+  fun();
+}
 //
-// console.log(call3Times("fun"));
+var hello = function() {
+  console.log("Hello World!");
+}
+call3Times(hello);
 
 
-//
+//SUM AN ARRAY
+
+
+//ACRONYM
+var array = ['very', 'important', 'person'];
+
+function acronym(words) {
+  return words.reduce(function(accumulator, word){
+    //need the first letter of each words and captilize the letter
+    var firstLetter = word[0].toUpperCase();
+    return accumulator + firstLetter;
+  }, ""); //The zero is the "initial value" which is optional, if you don't
+          //provide an intial value the intial value will be the first item in your array
+}
+
+console.log(acronym(array)); //We should see "VIP"
+
+
+
+//BONUS: MAP
+//Implement your own custom map function which takes two arguments: an array
+//arr and a function fun. It will return a new array, with each of its results
+//being the result of calling fun with each array element.
+
+var exclaim = function(thing) {
+  return thing + "!";
+}
+
+
+function map(arr, fun) {
+  var newArray = [];
+
+  for(var i=0; i<arr.length; i++) {
+    var element = arr[i];
+    var newElement = fun(element);
+    newArray.push(newElement);
+  }
+
+  return newArray;
+}
+
+var myArray = [1,2,"hi","sup"];
+console.log(map(myArray, exclaim));
